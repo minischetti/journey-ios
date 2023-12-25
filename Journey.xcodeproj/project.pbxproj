@@ -15,6 +15,8 @@
 		80A1D5542B38A300007ACEFD /* JourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1D5532B38A300007ACEFD /* JourneyTests.swift */; };
 		80A1D55E2B38A300007ACEFD /* JourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1D55D2B38A300007ACEFD /* JourneyUITests.swift */; };
 		80A1D5602B38A300007ACEFD /* JourneyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1D55F2B38A300007ACEFD /* JourneyUITestsLaunchTests.swift */; };
+		80A1D56D2B38A3BB007ACEFD /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1D56C2B38A3BB007ACEFD /* Status.swift */; };
+		80A1D5712B3A1454007ACEFD /* Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1D5702B3A1454007ACEFD /* Repeat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		80A1D5592B38A300007ACEFD /* JourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A1D55D2B38A300007ACEFD /* JourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyUITests.swift; sourceTree = "<group>"; };
 		80A1D55F2B38A300007ACEFD /* JourneyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		80A1D56C2B38A3BB007ACEFD /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		80A1D5702B3A1454007ACEFD /* Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,12 @@
 				80A1D53E2B38A2FE007ACEFD /* JourneyApp.swift */,
 				80A1D5402B38A2FE007ACEFD /* ContentView.swift */,
 				80A1D5422B38A2FE007ACEFD /* Item.swift */,
+				80A1D56C2B38A3BB007ACEFD /* Status.swift */,
 				80A1D5442B38A2FF007ACEFD /* Assets.xcassets */,
 				80A1D5462B38A2FF007ACEFD /* Journey.entitlements */,
 				80A1D54A2B38A2FF007ACEFD /* Info.plist */,
 				80A1D5472B38A2FF007ACEFD /* Preview Content */,
+				80A1D5702B3A1454007ACEFD /* Repeat.swift */,
 			);
 			path = Journey;
 			sourceTree = "<group>";
@@ -264,9 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A1D5712B3A1454007ACEFD /* Repeat.swift in Sources */,
 				80A1D5412B38A2FE007ACEFD /* ContentView.swift in Sources */,
 				80A1D5432B38A2FE007ACEFD /* Item.swift in Sources */,
 				80A1D53F2B38A2FE007ACEFD /* JourneyApp.swift in Sources */,
+				80A1D56D2B38A3BB007ACEFD /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

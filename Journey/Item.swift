@@ -10,9 +10,22 @@ import SwiftData
 
 @Model
 final class Item {
-    var timestamp: Date
-    
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    var id: UUID
+    var title: String
+    var content: String?
+//    var status: Status
+    var creationDate: Date
+    var dueDate: Date?
+    var parents: [String]?
+    var children: [String]?
+    var repeats: Repeat?
+
+    init(title: String, content: String, status: Status, creationDate: Date, dueDate: Date) {
+        self.id = UUID()
+        self.title = title
+        self.content = content
+//        self.status = status
+        self.creationDate = creationDate
+        self.dueDate = dueDate
     }
 }
