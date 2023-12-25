@@ -106,11 +106,11 @@
 				80A1D5402B38A2FE007ACEFD /* ContentView.swift */,
 				80A1D5422B38A2FE007ACEFD /* Item.swift */,
 				80A1D56C2B38A3BB007ACEFD /* Status.swift */,
+				80A1D5702B3A1454007ACEFD /* Repeat.swift */,
 				80A1D5442B38A2FF007ACEFD /* Assets.xcassets */,
 				80A1D5462B38A2FF007ACEFD /* Journey.entitlements */,
 				80A1D54A2B38A2FF007ACEFD /* Info.plist */,
 				80A1D5472B38A2FF007ACEFD /* Preview Content */,
-				80A1D5702B3A1454007ACEFD /* Repeat.swift */,
 			);
 			path = Journey;
 			sourceTree = "<group>";
