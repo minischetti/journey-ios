@@ -15,10 +15,39 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-//                Text("Home")
-//                .tabItem {
-//                    Image(systemName: "house")
-//                }
+            NavigationView {
+                List {
+                    ForEach(items) { item in
+                        NavigationLink(destination: Text(item.title)) {
+                            Text(item.title)
+                        }
+                    }
+                    .onDelete { indexSet in
+                        indexSet.forEach { index in
+                            modelContext.delete(items[index])
+                        }
+                    }
+                }
+                .navigationTitle("Journey")
+                #if os(iOS)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action : {
+                            isShowingSheet.toggle()
+                        }) {
+                            Image(systemName: "plus")
+                        }
+                    }
+                }
+                #endif
+                .sheet(isPresented: $isShowingSheet) {
+                    NavigationStack {
+                        addListForm()
+                    }
+                    .presentationDetents([.medium, .large])
+                    .presentationDragIndicator(.visible)
+                }
+            }
             VStack {
                 List {
                     ForEach(items) { item in
@@ -30,21 +59,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                Button(action : {
-                    isShowingSheet.toggle()
-                }) {
-                    Text("Add item")
-                }
-                .padding()
-                .sheet(isPresented: $isShowingSheet) {
-                    addListForm()
-                }
-                Spacer()
             }
-            .tabItem {
-                Image(systemName: "list.bullet")
-            }
-
         }
 
     }
@@ -105,7 +120,6 @@ struct ContentView: View {
                     }
                 }
             }
-
         }
 
 
