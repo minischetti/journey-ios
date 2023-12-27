@@ -17,7 +17,7 @@ final class Item {
     var creationDate: Date
     var dueDate: Date?
     var parents: [String]?
-    var children: [String]?
+    var children: [Item]?
     var repeats: Repeat?
 
     init(title: String, content: String, status: Status, creationDate: Date, dueDate: Date) {
