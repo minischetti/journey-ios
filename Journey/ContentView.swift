@@ -29,25 +29,25 @@ struct ContentView: View {
                     }
                 }
                 .navigationTitle("Journey")
-                #if os(iOS)
+#if os(iOS)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action : {
                             isShowingSheet.toggle()
                         }) {
-                            Image(systemName: "plus")
+                            Image(systemName: "plus.circle")
                         }
                     }
                 }
-                #endif
+#endif
                 .sheet(isPresented: $isShowingSheet) {
                     NavigationStack {
                         addListForm()
-                    }
+                        }
                     .presentationDetents([.medium, .large])
                     .presentationDragIndicator(.visible)
+                    }
                 }
-            }
             VStack {
                 List {
                     ForEach(items) { item in
@@ -108,18 +108,32 @@ struct ContentView: View {
                     }
                     DatePicker("End", selection: .constant(Date()))
                 }
-                Section {
-                    Button("Cancel") {
+            }
+            #if os(iOS)
+            .toolbar {
+                ToolbarItemGroup(placement: .cancellationAction) {
+                    Button(action : {
                         reset()
                         dismiss()
+                    }) {
+                        Image(systemName: "xmark.circle")
                     }
-                    Button("Save") {
+                    Button(action : {
+                        reset()
+                    }) {
+                        Text("Clear")
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button(action : {
                         save()
                         reset()
-//                        dismiss()
+                    }) {
+                        Text("Save")
                     }
                 }
             }
+            #endif
         }
 
 
